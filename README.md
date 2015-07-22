@@ -18,7 +18,7 @@ Tested with Zabbix 2.4.5 in a productive environment with GPFS Version 4.1.0.0
 
 Please keep in mind: THIS IS BETA! Unfortunately I have no lab environment here for testing, only two productive clusters. This is the very first shot.
 
-So any feedback is welcome! Feel free to contribute ether directly here on https://github.com/raimokr/zabbix_template_gpfs/ or contact me via email at raimo.kraeuchi@gmail.com
+So any feedback is welcome! Feel free to contribute either directly here on https://github.com/raimokr/zabbix_template_gpfs/ or contact me via email at raimo.kraeuchi@gmail.com
 
 Installation guide:
 1. be sure your GPFS snmp_collector node is set up correctly according to this guide: http://www.ibm.com/developerworks/library/l-snmp-gpfs/
