@@ -31,8 +31,8 @@ Important:
 I highly recommend to implement a Zabbix action rule of type "internal" that alerts you whenever item "GPFS Cluster Name - SNMP Ping" changes state from "normal" to "not supported". You can filter for Application "Availability". With that you can ensure, that you get alerted if the snmp_collector is not reachable (Zabbix sends out no trigger alerts if the items get status "not supported"!)
 
 ToDo:
-- implement snmp traps too
-- add more SSH Checks and with that get more information out of the GPFS Cluster (e.g. mmgetstate -a  etc.)
+- at least adding {MACROS} for SNMP-Community (sorry, forgot that)
+- adding more SSH Checks and with that get more information out of the GPFS Cluster (e.g. mmgetstate, mmlscluster, mmlsnode etc.)
 - tuning, optimizing, debugging
 
 Have fun!
