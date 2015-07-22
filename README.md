@@ -13,7 +13,6 @@ All items, triggers and graphs are generated automatically with Low-Level-Discov
 - GPFS File Systems Performance
 - GPFS Nodes
 - GPFS Storage Nodes
-- 
 
 Tested with Zabbix 2.4.5 in a productive environment.
 
@@ -38,3 +37,4 @@ ToDo:
 
 Have fun!
 Raimo Kräuchi
+https://plus.google.com/+RaimoKrauchi
