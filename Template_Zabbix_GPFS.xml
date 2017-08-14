@@ -594,7 +594,7 @@
               <publickey/>
               <privatekey/>
               <port/>
-              <description>The full block (unfragmented) free space in kilobytes.</description>
+              <description>The full block (unfragmented) free space in bytes.</description>
               <inventory_link>0</inventory_link>
               <applications>
                 <application>
@@ -637,7 +637,7 @@
               <publickey/>
               <privatekey/>
               <port/>
-              <description>The full block (unfragmented) free space in kilobytes.</description>
+              <description>The full block (unfragmented) free space in bytes.</description>
               <inventory_link>0</inventory_link>
               <applications>
                 <application>
@@ -811,7 +811,7 @@
               <publickey/>
               <privatekey/>
               <port/>
-              <description>The sub-block (fragmented) free space in kilobytes.</description>
+              <description>The sub-block (fragmented) free space in bytes.</description>
               <inventory_link>0</inventory_link>
               <applications>
                 <application>
@@ -854,7 +854,7 @@
               <publickey/>
               <privatekey/>
               <port/>
-              <description>The sub-block (fragmented) free space in kilobytes.</description>
+              <description>The sub-block (fragmented) free space in bytes.</description>
               <inventory_link>0</inventory_link>
               <applications>
                 <application>
@@ -985,7 +985,7 @@
               <publickey/>
               <privatekey/>
               <port/>
-              <description>The total disk space in kilobytes.</description>
+              <description>The total disk space in bytes.</description>
               <inventory_link>0</inventory_link>
               <applications>
                 <application>
@@ -3147,7 +3147,7 @@
               <publickey/>
               <privatekey/>
               <port/>
-              <description>The free disk space of the file system in kilobytes.</description>
+              <description>The free disk space of the file system in bytes.</description>
               <inventory_link>0</inventory_link>
               <applications>
                 <application>
@@ -3190,7 +3190,7 @@
               <publickey/>
               <privatekey/>
               <port/>
-              <description>The free disk space of the file system in kilobytes.</description>
+              <description>The free disk space of the file system in bytes.</description>
               <inventory_link>0</inventory_link>
               <applications>
                 <application>
@@ -3495,7 +3495,7 @@
               <publickey/>
               <privatekey/>
               <port/>
-              <description>The total disk space of the file system in kilobytes.</description>
+              <description>The total disk space of the file system in bytes.</description>
               <inventory_link>0</inventory_link>
               <applications>
                 <application>
@@ -6095,7 +6095,7 @@
               <status>0</status>
               <value_type>3</value_type>
               <allowed_hosts/>
-              <units>kB</units>
+              <units>B</units>
               <delta>0</delta>
               <snmpv3_contextname/>
               <snmpv3_securityname/>
@@ -6104,7 +6104,7 @@
               <snmpv3_authpassphrase/>
               <snmpv3_privprotocol>0</snmpv3_privprotocol>
               <snmpv3_privpassphrase/>
-              <formula>1</formula>
+              <formula>1024</formula>
               <delay_flex/>
               <params>last("gpfsStgPoolFreeSpaceL[{#SNMPVALUE}]")&#13;
 +&#13;
@@ -6117,7 +6117,7 @@
               <publickey/>
               <privatekey/>
               <port/>
-              <description>The free disk space in the storage pool in kilobytes.</description>
+              <description>The free disk space in the storage pool in bytes.</description>
               <inventory_link>0</inventory_link>
               <applications>
                 <application>
@@ -6140,7 +6140,7 @@
               <status>0</status>
               <value_type>3</value_type>
               <allowed_hosts/>
-              <units>kB</units>
+              <units>B</units>
               <delta>1</delta>
               <snmpv3_contextname/>
               <snmpv3_securityname/>
@@ -6160,7 +6160,7 @@
               <publickey/>
               <privatekey/>
               <port/>
-              <description>The free disk space in the storage pool in kilobytes.</description>
+              <description>The free disk space in the storage pool in bytes.</description>
               <inventory_link>0</inventory_link>
               <applications>
                 <application>
@@ -6312,7 +6312,7 @@
               <status>0</status>
               <value_type>3</value_type>
               <allowed_hosts/>
-              <units>kB</units>
+              <units>B</units>
               <delta>0</delta>
               <snmpv3_contextname/>
               <snmpv3_securityname/>
@@ -6321,7 +6321,7 @@
               <snmpv3_authpassphrase/>
               <snmpv3_privprotocol>0</snmpv3_privprotocol>
               <snmpv3_privpassphrase/>
-              <formula>1</formula>
+              <formula>1024</formula>
               <delay_flex/>
               <params>last("gpfsStgPoolTotalSpaceL[{#SNMPVALUE}]")&#13;
 +&#13;
@@ -6334,7 +6334,7 @@
               <publickey/>
               <privatekey/>
               <port/>
-              <description>The total disk space in the storage pool in kilobytes.</description>
+              <description>The total disk space in the storage pool in bytes.</description>
               <inventory_link>0</inventory_link>
               <applications>
                 <application>
