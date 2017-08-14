@@ -1,7 +1,7 @@
 # zabbix_template_gpfs
 Zabbix Template for GPFS (General Parallel File System) Cluster Filesystem with LLD-Discovery
 
-v0.1 beta
+v0.2
 
 This Zabbix template monitors a GPFS Cluster via a GPFS snmp_collector node.
 
@@ -15,8 +15,6 @@ All items, triggers and graphs are generated automatically with Low-Level-Discov
 - GPFS Storage Nodes
 
 Tested with Zabbix 2.4.5 in a productive environment with GPFS Version 4.1.0.0
-
-Please keep in mind: THIS IS BETA! Unfortunately I have no lab environment here for testing, only two productive clusters. This is the very first shot.
 
 So any feedback is welcome! Feel free to contribute either directly here on https://github.com/raimokr/zabbix_template_gpfs/ or contact me via email at raimo.kraeuchi@gmail.com
 
@@ -33,7 +31,6 @@ Important:
 I highly recommend to implement a Zabbix action rule of type "internal" that alerts you whenever item "GPFS Cluster Name - SNMP Ping" changes state from "normal" to "not supported". You can filter for Application "Availability". With that you can ensure, that you get alerted if the snmp_collector is not reachable (Zabbix sends out no trigger alerts if the items get status "not supported"!)
 
 ToDo:
-- at least adding {MACROS} for SNMP-Community (sorry, forgot that)
 - adding more SSH Checks and with that get more information out of the GPFS Cluster (e.g. mmgetstate, mmlscluster, mmlsnode etc.)
 - tuning, optimizing, debugging
 
