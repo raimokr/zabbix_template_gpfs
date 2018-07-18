@@ -5968,19 +5968,19 @@
           <trigger_prototypes>
             <trigger_prototype>
               <expression>{Template GPFS Cluster:gpfsNodeHealthy[{#SNMPVALUE}].str(yes)}&lt;&gt;1</expression>
-              <name>{#SNMPVALUE}: Node is NOT HEALTHY! Take action!</name>
+              <name>{#SNMPVALUE}: Node is NOT HEALTHY!</name>
               <url/>
               <status>0</status>
-              <priority>4</priority>
+              <priority>2</priority>
               <description/>
               <type>0</type>
             </trigger_prototype>
             <trigger_prototype>
               <expression>{Template GPFS Cluster:gpfsNodeStatus[{#SNMPVALUE}].str(up)}&lt;&gt;1</expression>
-              <name>{#SNMPVALUE}: Node is NOT UP! Take action!</name>
+              <name>{#SNMPVALUE}: Node is NOT UP!</name>
               <url/>
               <status>0</status>
-              <priority>4</priority>
+              <priority>0</priority>
               <description/>
               <type>0</type>
             </trigger_prototype>
