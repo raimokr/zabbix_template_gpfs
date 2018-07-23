@@ -56,7 +56,7 @@
         <item>
           <name>GPFS Cluster Name - SNMP Ping</name>
           <type>4</type>
-          <snmp_community>public</snmp_community>
+          <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
           <multiplier>0</multiplier>
           <snmp_oid>.1.3.6.1.4.1.2.6.212.1.2.1.1.0</snmp_oid>
           <key>gpfsClusterName_ping</key>
@@ -147,7 +147,7 @@
         <discovery_rule>
           <name>GPFS Clusters</name>
           <type>4</type>
-          <snmp_community>public</snmp_community>
+          <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
           <snmp_oid>.1.3.6.1.4.1.2.6.212.1.2.1.1</snmp_oid>
           <key>gpfsClusterName</key>
           <delay>300</delay>
@@ -180,7 +180,7 @@
             <item_prototype>
               <name>$1: ID</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.2.1.2.{#SNMPINDEX}</snmp_oid>
               <key>gpfsClusterId[{#SNMPVALUE}]</key>
@@ -223,7 +223,7 @@
             <item_prototype>
               <name>$1: MinReleaseLevel</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.2.1.3.{#SNMPINDEX}</snmp_oid>
               <key>gpfsClusterMinReleaseLevel[{#SNMPVALUE}]</key>
@@ -266,7 +266,7 @@
             <item_prototype>
               <name>$1: Name</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.2.1.1.{#SNMPINDEX}</snmp_oid>
               <key>gpfsClusterName[{#SNMPVALUE}]</key>
@@ -309,7 +309,7 @@
             <item_prototype>
               <name>$1: Number of File Systems</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.2.1.5.{#SNMPINDEX}</snmp_oid>
               <key>gpfsClusterNumFileSystems[{#SNMPVALUE}]</key>
@@ -352,9 +352,9 @@
             <item_prototype>
               <name>$1: Number of Nodes</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
-              <snmp_oid>.1.3.6.1.4.1.2.6.212.1.2.1.2.{#SNMPINDEX}</snmp_oid>
+              <snmp_oid>.1.3.6.1.4.1.2.6.212.1.2.1.4.{#SNMPINDEX}</snmp_oid>
               <key>gpfsClusterNumNodes[{#SNMPVALUE}]</key>
               <delay>900</delay>
               <history>90</history>
@@ -400,7 +400,7 @@
         <discovery_rule>
           <name>GPFS Disks Information</name>
           <type>4</type>
-          <snmp_community>public</snmp_community>
+          <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
           <snmp_oid>.1.3.6.1.4.1.2.6.212.1.9.1.1</snmp_oid>
           <key>gpfsDiskName</key>
           <delay>300</delay>
@@ -433,7 +433,7 @@
             <item_prototype>
               <name>$1: Availability</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.9.1.5.{#SNMPINDEX}</snmp_oid>
               <key>gpfsDiskAvailability[{#SNMPVALUE}]</key>
@@ -476,7 +476,7 @@
             <item_prototype>
               <name>$1: Belongs to Filesystem</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.9.1.2.{#SNMPINDEX}</snmp_oid>
               <key>gpfsDiskFSName[{#SNMPVALUE}]</key>
@@ -519,7 +519,7 @@
             <item_prototype>
               <name>$1: Belongs to Storage Pool</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.9.1.3.{#SNMPINDEX}</snmp_oid>
               <key>gpfsDiskStgPoolName[{#SNMPVALUE}]</key>
@@ -594,7 +594,7 @@
               <publickey/>
               <privatekey/>
               <port/>
-              <description>The full block (unfragmented) free space in kilobytes.</description>
+              <description>The full block (unfragmented) free space in bytes.</description>
               <inventory_link>0</inventory_link>
               <applications>
                 <application>
@@ -637,7 +637,7 @@
               <publickey/>
               <privatekey/>
               <port/>
-              <description>The full block (unfragmented) free space in kilobytes.</description>
+              <description>The full block (unfragmented) free space in bytes.</description>
               <inventory_link>0</inventory_link>
               <applications>
                 <application>
@@ -650,7 +650,7 @@
             <item_prototype>
               <name>$1: Full Block Free Space Higher</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.9.1.9.{#SNMPINDEX}</snmp_oid>
               <key>gpfsDiskFullBlockFreeSpaceH[{#SNMPVALUE}]</key>
@@ -693,7 +693,7 @@
             <item_prototype>
               <name>$1: Full Block Free Space Lower</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.9.1.8.{#SNMPINDEX}</snmp_oid>
               <key>gpfsDiskFullBlockFreeSpaceL[{#SNMPVALUE}]</key>
@@ -736,7 +736,7 @@
             <item_prototype>
               <name>$1: Status</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.9.1.4.{#SNMPINDEX}</snmp_oid>
               <key>gpfsDiskStatus[{#SNMPVALUE}]</key>
@@ -811,7 +811,7 @@
               <publickey/>
               <privatekey/>
               <port/>
-              <description>The sub-block (fragmented) free space in kilobytes.</description>
+              <description>The sub-block (fragmented) free space in bytes.</description>
               <inventory_link>0</inventory_link>
               <applications>
                 <application>
@@ -854,7 +854,7 @@
               <publickey/>
               <privatekey/>
               <port/>
-              <description>The sub-block (fragmented) free space in kilobytes.</description>
+              <description>The sub-block (fragmented) free space in bytes.</description>
               <inventory_link>0</inventory_link>
               <applications>
                 <application>
@@ -867,7 +867,7 @@
             <item_prototype>
               <name>$1: Sub Block Free Space Higher</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.9.1.11.{#SNMPINDEX}</snmp_oid>
               <key>gpfsDiskSubBlockFreeSpaceH[{#SNMPVALUE}]</key>
@@ -910,7 +910,7 @@
             <item_prototype>
               <name>$1: Sub Block Free Space Lower</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.9.1.10.{#SNMPINDEX}</snmp_oid>
               <key>gpfsDiskSubBlockFreeSpaceL[{#SNMPVALUE}]</key>
@@ -985,7 +985,7 @@
               <publickey/>
               <privatekey/>
               <port/>
-              <description>The total disk space in kilobytes.</description>
+              <description>The total disk space in bytes.</description>
               <inventory_link>0</inventory_link>
               <applications>
                 <application>
@@ -998,7 +998,7 @@
             <item_prototype>
               <name>$1: Total Space Higher</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.9.1.7.{#SNMPINDEX}</snmp_oid>
               <key>gpfsDiskTotalSpaceH[{#SNMPVALUE}]</key>
@@ -1041,7 +1041,7 @@
             <item_prototype>
               <name>$1: Total Space Lower</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.9.1.6.{#SNMPINDEX}</snmp_oid>
               <key>gpfsDiskTotalSpaceL[{#SNMPVALUE}]</key>
@@ -1216,7 +1216,7 @@
         <discovery_rule>
           <name>GPFS Disks Performance</name>
           <type>4</type>
-          <snmp_community>public</snmp_community>
+          <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
           <snmp_oid>.1.3.6.1.4.1.2.6.212.1.11.1.1</snmp_oid>
           <key>gpfsDiskPerfName</key>
           <delay>300</delay>
@@ -1249,7 +1249,7 @@
             <item_prototype>
               <name>$1: Belongs to File System</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.11.1.2.{#SNMPINDEX}</snmp_oid>
               <key>DiskPerfFSName[{#SNMPVALUE}]</key>
@@ -1292,7 +1292,7 @@
             <item_prototype>
               <name>$1: Belongs to Storage Pool</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.11.1.3.{#SNMPINDEX}</snmp_oid>
               <key>gpfsDiskPerfStgPoolName[{#SNMPVALUE}]</key>
@@ -1380,7 +1380,7 @@
             <item_prototype>
               <name>$1: Longest Read Time Higher</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.11.1.9.{#SNMPINDEX}</snmp_oid>
               <key>gpfsDiskLongestReadTimeH[{#SNMPVALUE}]</key>
@@ -1423,7 +1423,7 @@
             <item_prototype>
               <name>$1: Longest Read Time Lower</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.11.1.8.{#SNMPINDEX}</snmp_oid>
               <key>gpfsDiskLongestReadTimeL[{#SNMPVALUE}]</key>
@@ -1511,7 +1511,7 @@
             <item_prototype>
               <name>$1: Longest Write Time Higher</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.11.1.11.{#SNMPINDEX}</snmp_oid>
               <key>gpfsDiskLongestWriteTimeH[{#SNMPVALUE}]</key>
@@ -1554,7 +1554,7 @@
             <item_prototype>
               <name>$1: Longest Write Time Lower</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.11.1.10.{#SNMPINDEX}</snmp_oid>
               <key>gpfsDiskLongestWriteTimeL[{#SNMPVALUE}]</key>
@@ -1597,7 +1597,7 @@
             <item_prototype>
               <name>$1: Number of Read Operations</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.11.1.20.{#SNMPINDEX}</snmp_oid>
               <key>gpfsDiskReadOps[{#SNMPVALUE}]</key>
@@ -1683,7 +1683,7 @@
             <item_prototype>
               <name>$1: Number of Write Operations</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.11.1.21.{#SNMPINDEX}</snmp_oid>
               <key>gpfsDiskWriteOps[{#SNMPVALUE}]</key>
@@ -1857,7 +1857,7 @@
             <item_prototype>
               <name>$1: Read Bytes Higher</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.11.1.17.{#SNMPINDEX}</snmp_oid>
               <key>gpfsDiskReadBytesH[{#SNMPVALUE}]</key>
@@ -1900,7 +1900,7 @@
             <item_prototype>
               <name>$1: Read Bytes Lower</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.11.1.16.{#SNMPINDEX}</snmp_oid>
               <key>gpfsDiskReadBytesL[{#SNMPVALUE}]</key>
@@ -1988,7 +1988,7 @@
             <item_prototype>
               <name>$1: Shortest Read Time Higher</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.11.1.13.{#SNMPINDEX}</snmp_oid>
               <key>gpfsDiskShortestReadTimeH[{#SNMPVALUE}]</key>
@@ -2031,7 +2031,7 @@
             <item_prototype>
               <name>$1: Shortest Read Time Lower</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.11.1.12.{#SNMPINDEX}</snmp_oid>
               <key>gpfsDiskShortestReadTimeL[{#SNMPVALUE}]</key>
@@ -2119,7 +2119,7 @@
             <item_prototype>
               <name>$1: Shortest Write Time Higher</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.11.1.15.{#SNMPINDEX}</snmp_oid>
               <key>gpfsDiskShortestWriteTimeH[{#SNMPVALUE}]</key>
@@ -2162,7 +2162,7 @@
             <item_prototype>
               <name>$1: Shortest Write Time Lower</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.11.1.14.{#SNMPINDEX}</snmp_oid>
               <key>gpfsDiskShortestWriteTimeL[{#SNMPVALUE}]</key>
@@ -2293,7 +2293,7 @@
             <item_prototype>
               <name>$1: Total Read Time Higher</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.11.1.5.{#SNMPINDEX}</snmp_oid>
               <key>gpfsDiskReadTimeH[{#SNMPVALUE}]</key>
@@ -2336,7 +2336,7 @@
             <item_prototype>
               <name>$1: Total Read Time Lower</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.11.1.4.{#SNMPINDEX}</snmp_oid>
               <key>gpfsDiskReadTimeL[{#SNMPVALUE}]</key>
@@ -2467,7 +2467,7 @@
             <item_prototype>
               <name>$1: Total Write Time Higher</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.11.1.7.{#SNMPINDEX}</snmp_oid>
               <key>gpfsDiskWriteTimeH[{#SNMPVALUE}]</key>
@@ -2510,7 +2510,7 @@
             <item_prototype>
               <name>$1: Total Write Time Lower</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.11.1.6.{#SNMPINDEX}</snmp_oid>
               <key>gpfsDiskWriteTimeL[{#SNMPVALUE}]</key>
@@ -2641,7 +2641,7 @@
             <item_prototype>
               <name>$1: Write Bytes Higher</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.11.1.19.{#SNMPINDEX}</snmp_oid>
               <key>gpfsDiskWriteBytesH[{#SNMPVALUE}]</key>
@@ -2684,7 +2684,7 @@
             <item_prototype>
               <name>$1: Write Bytes Lower</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.11.1.18.{#SNMPINDEX}</snmp_oid>
               <key>gpfsDiskWriteBytesL[{#SNMPVALUE}]</key>
@@ -2865,7 +2865,7 @@
         <discovery_rule>
           <name>GPFS File Systems</name>
           <type>4</type>
-          <snmp_community>public</snmp_community>
+          <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
           <snmp_oid>.1.3.6.1.4.1.2.6.212.1.6.1.1</snmp_oid>
           <key>gpfsFileSystemName</key>
           <delay>300</delay>
@@ -2898,7 +2898,7 @@
             <item_prototype>
               <name>$1: Executable Status</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.6.1.3.{#SNMPINDEX}</snmp_oid>
               <key>gpfsFileSystemXstatus[{#SNMPVALUE}]</key>
@@ -3029,7 +3029,7 @@
             <item_prototype>
               <name>$1: Free Inodes Higher</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.6.1.11.{#SNMPINDEX}</snmp_oid>
               <key>gpfsFileSystemNumFreeInodesH[{#SNMPVALUE}]</key>
@@ -3072,7 +3072,7 @@
             <item_prototype>
               <name>$1: Free Inodes Lower</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.6.1.10.{#SNMPINDEX}</snmp_oid>
               <key>gpfsFileSystemNumFreeInodesL[{#SNMPVALUE}]</key>
@@ -3147,7 +3147,7 @@
               <publickey/>
               <privatekey/>
               <port/>
-              <description>The free disk space of the file system in kilobytes.</description>
+              <description>The free disk space of the file system in bytes.</description>
               <inventory_link>0</inventory_link>
               <applications>
                 <application>
@@ -3190,7 +3190,7 @@
               <publickey/>
               <privatekey/>
               <port/>
-              <description>The free disk space of the file system in kilobytes.</description>
+              <description>The free disk space of the file system in bytes.</description>
               <inventory_link>0</inventory_link>
               <applications>
                 <application>
@@ -3203,7 +3203,7 @@
             <item_prototype>
               <name>$1: Free Space Higher</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.6.1.9.{#SNMPINDEX}</snmp_oid>
               <key>gpfsFileSystemFreeSpaceH[{#SNMPVALUE}]</key>
@@ -3246,7 +3246,7 @@
             <item_prototype>
               <name>$1: Free Space Lower</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.6.1.8.{#SNMPINDEX}</snmp_oid>
               <key>gpfsFileSystemFreeSpaceL[{#SNMPVALUE}]</key>
@@ -3289,7 +3289,7 @@
             <item_prototype>
               <name>$1: Status</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.6.1.2.{#SNMPINDEX}</snmp_oid>
               <key>gpfsFileSystemStatus[{#SNMPVALUE}]</key>
@@ -3377,7 +3377,7 @@
             <item_prototype>
               <name>$1: Total Inodes Higher</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.6.1.7.{#SNMPINDEX}</snmp_oid>
               <key>gpfsFileSystemNumTotalInodesH[{#SNMPVALUE}]</key>
@@ -3420,7 +3420,7 @@
             <item_prototype>
               <name>$1: Total Inodes Lower</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.6.1.6.{#SNMPINDEX}</snmp_oid>
               <key>gpfsFileSystemNumTotalInodesL[{#SNMPVALUE}]</key>
@@ -3495,7 +3495,7 @@
               <publickey/>
               <privatekey/>
               <port/>
-              <description>The total disk space of the file system in kilobytes.</description>
+              <description>The total disk space of the file system in bytes.</description>
               <inventory_link>0</inventory_link>
               <applications>
                 <application>
@@ -3508,7 +3508,7 @@
             <item_prototype>
               <name>$1: Total Space Higher</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.6.1.5.{#SNMPINDEX}</snmp_oid>
               <key>gpfsFileSystemTotalSpaceH[{#SNMPVALUE}]</key>
@@ -3551,7 +3551,7 @@
             <item_prototype>
               <name>$1: Total Space Lower</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.6.1.4.{#SNMPINDEX}</snmp_oid>
               <key>gpfsFileSystemTotalSpaceL[{#SNMPVALUE}]</key>
@@ -3599,7 +3599,7 @@
         <discovery_rule>
           <name>GPFS File Systems Performance</name>
           <type>4</type>
-          <snmp_community>public</snmp_community>
+          <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
           <snmp_oid>.1.3.6.1.4.1.2.6.212.1.7.1.1</snmp_oid>
           <key>gpfsFileSystemPerfName</key>
           <delay>300</delay>
@@ -3720,7 +3720,7 @@
             <item_prototype>
               <name>$1: Bytes Read from Cache Higher</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.7.1.5.{#SNMPINDEX}</snmp_oid>
               <key>gpfsFileSystemBytesCacheH[{#SNMPVALUE}]</key>
@@ -3763,7 +3763,7 @@
             <item_prototype>
               <name>$1: Bytes Read from Cache Lower</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.7.1.4.{#SNMPINDEX}</snmp_oid>
               <key>gpfsFileSystemBytesCacheL[{#SNMPVALUE}]</key>
@@ -3894,7 +3894,7 @@
             <item_prototype>
               <name>$1: Bytes Read from Disk without Cache Higher</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.7.1.3.{#SNMPINDEX}</snmp_oid>
               <key>gpfsFileSystemBytesReadH[{#SNMPVALUE}]</key>
@@ -3937,7 +3937,7 @@
             <item_prototype>
               <name>$1: Bytes Read from Disk without Cache Lower</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.7.1.2.{#SNMPINDEX}</snmp_oid>
               <key>gpfsFileSystemBytesReadL[{#SNMPVALUE}]</key>
@@ -4068,7 +4068,7 @@
             <item_prototype>
               <name>$1: Bytes Written to Disk and Cache Higher</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.7.1.7.{#SNMPINDEX}</snmp_oid>
               <key>gpfsFileSystemBytesWrittenH[{#SNMPVALUE}]</key>
@@ -4111,7 +4111,7 @@
             <item_prototype>
               <name>$1: Bytes Written to Disk and Cache Lower</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.7.1.6.{#SNMPINDEX}</snmp_oid>
               <key>gpfsFileSystemBytesWrittenL[{#SNMPVALUE}]</key>
@@ -4154,7 +4154,7 @@
             <item_prototype>
               <name>$1: Number of File System Close Calls</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.7.1.12.{#SNMPINDEX}</snmp_oid>
               <key>gpfsFileSystemCloseCalls[{#SNMPVALUE}]</key>
@@ -4240,7 +4240,7 @@
             <item_prototype>
               <name>$1: Number of File System Open Calls</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.7.1.11.{#SNMPINDEX}</snmp_oid>
               <key>gpfsFileSystemOpenCalls[{#SNMPVALUE}]</key>
@@ -4326,7 +4326,7 @@
             <item_prototype>
               <name>$1: Number of File System Read Calls</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.7.1.13.{#SNMPINDEX}</snmp_oid>
               <key>gpfsFileSystemReadCalls[{#SNMPVALUE}]</key>
@@ -4412,7 +4412,7 @@
             <item_prototype>
               <name>$1: Number of File System ReadDir Calls</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.7.1.15.{#SNMPINDEX}</snmp_oid>
               <key>gpfsFileSystemReadDirCalls[{#SNMPVALUE}]</key>
@@ -4498,7 +4498,7 @@
             <item_prototype>
               <name>$1: Number of File System Write Calls</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.7.1.14.{#SNMPINDEX}</snmp_oid>
               <key>gpfsFileSystemWriteCalls[{#SNMPVALUE}]</key>
@@ -4584,7 +4584,7 @@
             <item_prototype>
               <name>$1: Number of Inode creations</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.7.1.19.{#SNMPINDEX}</snmp_oid>
               <key>gpfsFileSystemInodesCreated[{#SNMPVALUE}]</key>
@@ -4670,7 +4670,7 @@
             <item_prototype>
               <name>$1: Number of Inode Reads</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.7.1.17.{#SNMPINDEX}</snmp_oid>
               <key>gpfsFileSystemInodesRead[{#SNMPVALUE}]</key>
@@ -4756,7 +4756,7 @@
             <item_prototype>
               <name>$1: Number of Inode Updates to Disk</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.7.1.16.{#SNMPINDEX}</snmp_oid>
               <key>gpfsFileSystemInodesWritten[{#SNMPVALUE}]</key>
@@ -4842,7 +4842,7 @@
             <item_prototype>
               <name>$1: Number of Read Operations supplied from Cache</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.7.1.9.{#SNMPINDEX}</snmp_oid>
               <key>gpfsFileSystemCaches[{#SNMPVALUE}]</key>
@@ -4928,7 +4928,7 @@
             <item_prototype>
               <name>$1: Number of Read Operations supplied from Disk</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.7.1.8.{#SNMPINDEX}</snmp_oid>
               <key>gpfsFileSystemReads[{#SNMPVALUE}]</key>
@@ -5014,7 +5014,7 @@
             <item_prototype>
               <name>$1: Number of Stat Cache Hits</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.7.1.20.{#SNMPINDEX}</snmp_oid>
               <key>gpfsFileSystemStatCacheHit[{#SNMPVALUE}]</key>
@@ -5100,7 +5100,7 @@
             <item_prototype>
               <name>$1: Number of Stat Cache Miss</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.7.1.21.{#SNMPINDEX}</snmp_oid>
               <key>gpfsFileSystemStatCacheMiss[{#SNMPVALUE}]</key>
@@ -5186,7 +5186,7 @@
             <item_prototype>
               <name>$1: Number of Write Operations to both Disk and Cache</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.7.1.10.{#SNMPINDEX}</snmp_oid>
               <key>gpfsFileSystemWrites[{#SNMPVALUE}]</key>
@@ -5590,7 +5590,7 @@
         <discovery_rule>
           <name>GPFS Nodes</name>
           <type>4</type>
-          <snmp_community>public</snmp_community>
+          <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
           <snmp_oid>.1.3.6.1.4.1.2.6.212.1.4.1.1</snmp_oid>
           <key>gpfsNodeName</key>
           <delay>300</delay>
@@ -5623,7 +5623,7 @@
             <item_prototype>
               <name>$1: Node Diagnosis</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.4.1.8.{#SNMPINDEX}</snmp_oid>
               <key>gpfsNodeDiagnosis[{#SNMPVALUE}]</key>
@@ -5666,7 +5666,7 @@
             <item_prototype>
               <name>$1: Node Failure Count</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.4.1.5.{#SNMPINDEX}</snmp_oid>
               <key>gpfsNodeFailureCount[{#SNMPVALUE}]</key>
@@ -5709,7 +5709,7 @@
             <item_prototype>
               <name>$1: Node Healty</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.4.1.7.{#SNMPINDEX}</snmp_oid>
               <key>gpfsNodeHealthy[{#SNMPVALUE}]</key>
@@ -5752,7 +5752,7 @@
             <item_prototype>
               <name>$1: Node IP</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.4.1.2.{#SNMPINDEX}</snmp_oid>
               <key>gpfsNodeIp[{#SNMPVALUE}]</key>
@@ -5795,7 +5795,7 @@
             <item_prototype>
               <name>$1: Node Platform</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.4.1.3.{#SNMPINDEX}</snmp_oid>
               <key>gpfsNodePlatform[{#SNMPVALUE}]</key>
@@ -5838,7 +5838,7 @@
             <item_prototype>
               <name>$1: Node Status</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.4.1.4.{#SNMPINDEX}</snmp_oid>
               <key>gpfsNodeStatus[{#SNMPVALUE}]</key>
@@ -5881,7 +5881,7 @@
             <item_prototype>
               <name>$1: Node Thread Wait</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.4.1.6.{#SNMPINDEX}</snmp_oid>
               <key>gpfsNodeThreadWait[{#SNMPVALUE}]</key>
@@ -5924,7 +5924,7 @@
             <item_prototype>
               <name>$1: Node Version</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.4.1.9.{#SNMPINDEX}</snmp_oid>
               <key>gpfsNodeVersion[{#SNMPVALUE}]</key>
@@ -5968,19 +5968,19 @@
           <trigger_prototypes>
             <trigger_prototype>
               <expression>{Template GPFS Cluster:gpfsNodeHealthy[{#SNMPVALUE}].str(yes)}&lt;&gt;1</expression>
-              <name>{#SNMPVALUE}: Node is NOT HEALTHY! Take action!</name>
+              <name>{#SNMPVALUE}: Node is NOT HEALTHY!</name>
               <url/>
               <status>0</status>
-              <priority>4</priority>
+              <priority>2</priority>
               <description/>
               <type>0</type>
             </trigger_prototype>
             <trigger_prototype>
               <expression>{Template GPFS Cluster:gpfsNodeStatus[{#SNMPVALUE}].str(up)}&lt;&gt;1</expression>
-              <name>{#SNMPVALUE}: Node is NOT UP! Take action!</name>
+              <name>{#SNMPVALUE}: Node is NOT UP!</name>
               <url/>
               <status>0</status>
-              <priority>4</priority>
+              <priority>0</priority>
               <description/>
               <type>0</type>
             </trigger_prototype>
@@ -6009,7 +6009,7 @@
         <discovery_rule>
           <name>GPFS Storage Pools</name>
           <type>4</type>
-          <snmp_community>public</snmp_community>
+          <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
           <snmp_oid>.1.3.6.1.4.1.2.6.212.1.8.1.1</snmp_oid>
           <key>gpfsStgPoolName</key>
           <delay>300</delay>
@@ -6042,7 +6042,7 @@
             <item_prototype>
               <name>$1: Belongs to</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.8.1.2.{#SNMPINDEX}</snmp_oid>
               <key>gpfsStgPoolFSName[{#SNMPVALUE}]</key>
@@ -6095,7 +6095,7 @@
               <status>0</status>
               <value_type>3</value_type>
               <allowed_hosts/>
-              <units>kB</units>
+              <units>B</units>
               <delta>0</delta>
               <snmpv3_contextname/>
               <snmpv3_securityname/>
@@ -6104,7 +6104,7 @@
               <snmpv3_authpassphrase/>
               <snmpv3_privprotocol>0</snmpv3_privprotocol>
               <snmpv3_privpassphrase/>
-              <formula>1</formula>
+              <formula>1024</formula>
               <delay_flex/>
               <params>last("gpfsStgPoolFreeSpaceL[{#SNMPVALUE}]")&#13;
 +&#13;
@@ -6117,7 +6117,7 @@
               <publickey/>
               <privatekey/>
               <port/>
-              <description>The free disk space in the storage pool in kilobytes.</description>
+              <description>The free disk space in the storage pool in bytes.</description>
               <inventory_link>0</inventory_link>
               <applications>
                 <application>
@@ -6140,7 +6140,7 @@
               <status>0</status>
               <value_type>3</value_type>
               <allowed_hosts/>
-              <units>kB</units>
+              <units>B</units>
               <delta>1</delta>
               <snmpv3_contextname/>
               <snmpv3_securityname/>
@@ -6160,7 +6160,7 @@
               <publickey/>
               <privatekey/>
               <port/>
-              <description>The free disk space in the storage pool in kilobytes.</description>
+              <description>The free disk space in the storage pool in bytes.</description>
               <inventory_link>0</inventory_link>
               <applications>
                 <application>
@@ -6173,7 +6173,7 @@
             <item_prototype>
               <name>$1: Free Disk Space Higher</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.8.1.6.{#SNMPINDEX}</snmp_oid>
               <key>gpfsStgPoolFreeSpaceH[{#SNMPVALUE}]</key>
@@ -6216,7 +6216,7 @@
             <item_prototype>
               <name>$1: Free Disk Space Lower</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.8.1.5.{#SNMPINDEX}</snmp_oid>
               <key>gpfsStgPoolFreeSpaceL[{#SNMPVALUE}]</key>
@@ -6259,7 +6259,7 @@
             <item_prototype>
               <name>$1: Number of Disks</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.8.1.7.{#SNMPINDEX}</snmp_oid>
               <key>gpfsStgPoolNumDisks[{#SNMPVALUE}]</key>
@@ -6312,7 +6312,7 @@
               <status>0</status>
               <value_type>3</value_type>
               <allowed_hosts/>
-              <units>kB</units>
+              <units>B</units>
               <delta>0</delta>
               <snmpv3_contextname/>
               <snmpv3_securityname/>
@@ -6321,7 +6321,7 @@
               <snmpv3_authpassphrase/>
               <snmpv3_privprotocol>0</snmpv3_privprotocol>
               <snmpv3_privpassphrase/>
-              <formula>1</formula>
+              <formula>1024</formula>
               <delay_flex/>
               <params>last("gpfsStgPoolTotalSpaceL[{#SNMPVALUE}]")&#13;
 +&#13;
@@ -6334,7 +6334,7 @@
               <publickey/>
               <privatekey/>
               <port/>
-              <description>The total disk space in the storage pool in kilobytes.</description>
+              <description>The total disk space in the storage pool in bytes.</description>
               <inventory_link>0</inventory_link>
               <applications>
                 <application>
@@ -6347,7 +6347,7 @@
             <item_prototype>
               <name>$1: Total Disk Space Higher</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.8.1.4.{#SNMPINDEX}</snmp_oid>
               <key>gpfsStgPoolTotalSpaceH[{#SNMPVALUE}]</key>
@@ -6390,7 +6390,7 @@
             <item_prototype>
               <name>$1: Total Disk Space Lower</name>
               <type>4</type>
-              <snmp_community>public</snmp_community>
+              <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
               <multiplier>0</multiplier>
               <snmp_oid>.1.3.6.1.4.1.2.6.212.1.8.1.3.{#SNMPINDEX}</snmp_oid>
               <key>gpfsStgPoolTotalSpaceL[{#SNMPVALUE}]</key>
